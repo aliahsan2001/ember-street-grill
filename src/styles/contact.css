@@ -1,0 +1,117 @@
+/* ================= CONTACT ================= */
+
+/* ---------- night street ---------- */
+.street { position: relative; min-height: max(640px, 92svh); margin-top: calc(var(--header-h) * -1); overflow: hidden; isolation: isolate; display: flex; align-items: center; }
+.street-layer { position: absolute; inset: 0; pointer-events: none; will-change: transform; }
+.street-sky { background: linear-gradient(180deg, #05060d 0%, #0d0a17 45%, #1c0d10 78%, #2a120a 100%); }
+.stars i { position: absolute; border-radius: 50%; background: #fff6e0; opacity: .7; animation: twinkle 3.6s ease-in-out infinite; }
+@keyframes twinkle { 50% { opacity: .15; } }
+.moon { position: absolute; right: 16%; top: 14%; width: 58px; height: 58px; border-radius: 50%; box-shadow: inset -14px 6px 0 0 #f5e6c4; filter: drop-shadow(0 0 18px rgba(245,230,196,.35)); }
+.street-far { top: auto; height: 62%; bottom: 14%; }
+.street-far svg { width: 120%; height: 100%; margin-left: -10%; }
+.bld { fill: #0e0b13; }
+.win { fill: #f3b65a; opacity: .55; }
+.win.flick { animation: flick 4s steps(2) infinite; }
+@keyframes flick { 0%, 60% { opacity: .6; } 61%, 70% { opacity: .1; } 71%, 100% { opacity: .6; } }
+
+/* the shop */
+.shop { position: absolute; right: 9%; bottom: 13%; width: min(440px, 42vw); }
+.shop-neon {
+  position: absolute; left: 50%; bottom: calc(100% + 34px); translate: -50% 0;
+  font-family: var(--font-neon); font-size: clamp(2.4rem, 4.5vw, 4rem); letter-spacing: .08em; text-transform: uppercase;
+  color: #fff1e0;
+  text-shadow: 0 0 4px #fff, 0 0 10px var(--ember-2), 0 0 22px var(--ember), 0 0 46px var(--ember), 0 0 80px rgba(255,106,31,.6);
+  animation: neonFlicker 7s infinite;
+}
+@keyframes neonFlicker { 0%, 19%, 21%, 62%, 64%, 100% { opacity: 1; } 20%, 63% { opacity: .35; } }
+.shop-awning {
+  height: 46px; border-radius: 8px 8px 0 0; filter: brightness(.85);
+  background: repeating-linear-gradient(90deg, var(--truck-pink) 0 22px, var(--truck-yellow) 22px 44px, var(--truck-green) 44px 66px, #f6ede4 66px 88px);
+  clip-path: polygon(0 0, 100% 0, 100% 70%, 96% 100%, 92% 70%, 88% 100%, 84% 70%, 80% 100%, 76% 70%, 72% 100%, 68% 70%, 64% 100%, 60% 70%, 56% 100%, 52% 70%, 48% 100%, 44% 70%, 40% 100%, 36% 70%, 32% 100%, 28% 70%, 24% 100%, 20% 70%, 16% 100%, 12% 70%, 8% 100%, 4% 70%, 0 100%);
+}
+.shop-front { position: relative; height: 200px; background: #140d0b; border: 8px solid #231713; border-top: 0; overflow: hidden; }
+.shop-glow { position: absolute; inset: 0; background: radial-gradient(ellipse at 50% 100%, #ffb057 0%, #ff6a1f 30%, #7a2408 65%, #2a0f07 100%); opacity: .9; animation: glowBreath 3s ease-in-out infinite; }
+@keyframes glowBreath { 50% { opacity: .75; } }
+.shop-counter { position: absolute; left: 0; right: 0; bottom: 0; height: 52px; background: linear-gradient(180deg, #3a2018, #1a0f0b); border-top: 3px solid #c9944c; }
+.shop-shutter-roll { position: absolute; left: 0; right: 0; top: 0; height: 26px; background: repeating-linear-gradient(180deg, #3b3734 0 4px, #24201e 4px 6px); }
+.string-lights { position: absolute; left: -6%; width: 112%; top: -18px; height: 60px; overflow: visible; }
+.string-lights path { fill: none; stroke: #1c1513; stroke-width: 1.5; }
+.shop::after {
+  content: ''; position: absolute; left: -6%; right: -6%; top: -10px; height: 40px; pointer-events: none;
+  background: radial-gradient(circle, #ffe6a8 0 3px, rgba(255,200,120,.5) 4px, transparent 9px) 0 0 / 36px 34px repeat-x;
+  animation: twinkle 2.4s ease-in-out infinite;
+}
+
+/* glowing map pin over the shop */
+.street-pin { position: absolute; right: calc(9% + min(220px, 21vw) - 30px); bottom: calc(13% + 420px); width: 60px; display: grid; justify-items: center; }
+.pin-head {
+  position: relative; width: 60px; height: 60px; display: grid; place-items: center; border-radius: 50% 50% 50% 0; rotate: -45deg;
+  background: radial-gradient(circle at 35% 35%, #ffd08a, var(--ember) 55%, #b5370a);
+  box-shadow: 0 0 0 4px rgba(255,255,255,.12), 0 0 30px 8px rgba(255,106,31,.6), 0 20px 30px rgba(0,0,0,.5);
+  animation: pinBob 2.6s ease-in-out infinite;
+}
+.pin-head svg { width: 26px; height: 26px; rotate: 45deg; color: #2a0c03; }
+@keyframes pinBob { 50% { translate: 0 -10px; } }
+.pin-ring { width: 70px; height: 18px; margin-top: 18px; border-radius: 50%; border: 2px solid rgba(255,140,60,.7); animation: ringPulse 2.6s ease-out infinite; }
+@keyframes ringPulse { 0% { transform: scale(.4); opacity: 1; } 100% { transform: scale(1.8); opacity: 0; } }
+.pin-label { margin-top: 6px; white-space: nowrap; color: var(--ember-3); }
+
+/* lamp and wet road */
+.lamp { position: absolute; left: 6%; bottom: 13%; width: 12px; height: 62%; background: linear-gradient(90deg, #1a1514, #3a3330, #1a1514); }
+.lamp-head { position: absolute; left: -6px; top: -8px; width: 70px; height: 16px; border-radius: 8px; background: #2a2422; }
+.lamp-head::after { content: ''; position: absolute; right: 6px; bottom: -6px; width: 26px; height: 8px; border-radius: 0 0 14px 14px; background: #fff3d1; box-shadow: 0 0 30px 12px rgba(255,220,150,.6); }
+.lamp-cone { position: absolute; left: 30px; top: 6px; width: 260px; height: 140%; background: linear-gradient(180deg, rgba(255,225,160,.28), rgba(255,225,160,0) 80%); clip-path: polygon(40% 0, 60% 0, 100% 100%, 0 100%); filter: blur(4px); }
+.road { position: absolute; left: 0; right: 0; bottom: 0; height: 13%; background: linear-gradient(180deg, #0f0b0a, #050404); }
+.road-reflect { position: absolute; right: 9%; top: 0; width: min(440px, 42vw); height: 100%; background: linear-gradient(180deg, rgba(255,106,31,.45), transparent 80%); filter: blur(10px); }
+.lane { position: absolute; left: 0; right: 0; top: 55%; height: 3px; background: repeating-linear-gradient(90deg, rgba(255,230,180,.35) 0 60px, transparent 60px 120px); }
+
+.street-copy { position: relative; z-index: 2; padding-top: calc(var(--header-h) + 40px); padding-bottom: 120px; }
+.street-copy .lead { max-width: 46ch; margin: 18px 0 28px; }
+.street-copy h1 { font-size: clamp(3.4rem, 9vw, 7.4rem); }
+.street::after { content: ''; position: absolute; inset: 0; z-index: 1; pointer-events: none; background: linear-gradient(90deg, rgba(5,6,13,.85), rgba(5,6,13,.35) 45%, transparent 70%), linear-gradient(0deg, var(--bg), transparent 22%); }
+
+/* ---------- neon hours ---------- */
+.neon-grid { display: grid; grid-template-columns: 1fr 1.1fr; gap: clamp(30px, 5vw, 80px); align-items: center; }
+.neon-board {
+  position: relative; padding: clamp(26px, 4vw, 48px); border-radius: 18px;
+  background:
+    linear-gradient(rgba(10,6,6,.82), rgba(10,6,6,.9)),
+    repeating-linear-gradient(0deg, #3a1f17 0 26px, #241410 26px 29px),
+    repeating-linear-gradient(90deg, transparent 0 54px, #241410 54px 57px);
+  border: 1px solid rgba(255,255,255,.06);
+  box-shadow: inset 0 0 60px rgba(0,0,0,.8), 0 40px 70px -30px rgba(0,0,0,.9);
+}
+.neon-open { font-family: var(--font-neon); font-size: clamp(3rem, 7vw, 5rem); line-height: 1; text-transform: uppercase; letter-spacing: .12em; color: rgba(255,255,255,.12); }
+.neon-status { font-family: var(--font-mono); font-size: .72rem; letter-spacing: .14em; text-transform: uppercase; color: var(--muted); margin: 10px 0 24px; }
+.neon-hours { display: grid; gap: 4px; }
+.neon-hours li { display: flex; justify-content: space-between; gap: 16px; padding: 10px 4px; border-bottom: 1px solid rgba(255,255,255,.05); font-family: var(--font-neon); font-size: clamp(1.15rem, 2vw, 1.45rem); color: rgba(255,255,255,.14); }
+.n-day em { font-style: normal; font-family: var(--font-mono); font-size: .6rem; letter-spacing: .14em; margin-left: 10px; vertical-align: middle; padding: 3px 7px; border-radius: 4px; border: 1px solid currentColor; }
+
+/* tubes buzz on in sequence */
+.neon-board.is-lit .neon-open { color: #eaffef; text-shadow: 0 0 4px #fff, 0 0 12px #3cff8f, 0 0 28px #1fdc6a, 0 0 54px #1fdc6a; animation: tubeOn 1.2s steps(1) both; }
+.neon-board.is-lit .neon-open.is-closed { color: #ffe4e4; text-shadow: 0 0 4px #fff, 0 0 12px #ff4f6b, 0 0 28px #ff2448, 0 0 54px #ff2448; }
+.neon-board.is-lit .neon-hours li { animation: tubeOn 1s steps(1) both; animation-delay: calc(.5s + var(--i) * .16s); }
+.neon-board.is-lit .n-day { color: #ffe0f0; text-shadow: 0 0 3px #fff, 0 0 10px var(--truck-pink), 0 0 22px var(--truck-pink); }
+.neon-board.is-lit .n-time { color: #fff0e0; text-shadow: 0 0 3px #fff, 0 0 10px var(--ember-2), 0 0 22px var(--ember); }
+.neon-board.is-lit .is-today .n-day,
+.neon-board.is-lit .is-today .n-time { color: #fffbe6; text-shadow: 0 0 4px #fff, 0 0 12px var(--truck-yellow), 0 0 30px var(--truck-yellow), 0 0 60px rgba(255,210,63,.6); }
+@keyframes tubeOn { 0% { opacity: .15; } 10% { opacity: 1; } 15% { opacity: .2; } 25% { opacity: 1; } 30% { opacity: .4; } 40%, 100% { opacity: 1; } }
+.reduced .neon-board .neon-hours li, .reduced .neon-board .neon-open { animation: none; }
+
+.find-card { display: grid; gap: 14px; align-content: start; }
+.find-title { font-size: clamp(2.2rem, 4vw, 3rem); }
+.find-steps { display: grid; gap: 14px; counter-reset: f; margin: 6px 0 10px; }
+.find-steps li { display: grid; grid-template-columns: 34px 1fr; gap: 4px 12px; counter-increment: f; }
+.find-steps li::before { content: counter(f); grid-row: span 2; width: 34px; height: 34px; border-radius: 50%; display: grid; place-items: center; font-family: var(--font-display); font-weight: 800; color: var(--ember-3); border: 1px solid rgba(255,106,31,.4); }
+.find-steps span { color: var(--muted); font-size: .92rem; }
+
+@media (max-width: 900px) {
+  .neon-grid { grid-template-columns: 1fr; }
+  .street { align-items: flex-start; min-height: 900px; }
+  .shop { right: 50%; translate: 50% 0; width: min(380px, 80vw); }
+  .street-pin { right: 50%; translate: 50% 0; bottom: calc(13% + 300px); }
+  .road-reflect { right: 50%; translate: 50% 0; width: 80vw; }
+  .street::after { background: linear-gradient(180deg, rgba(5,6,13,.9), rgba(5,6,13,.4) 45%, transparent 60%), linear-gradient(0deg, var(--bg), transparent 18%); }
+  .street-copy { padding-bottom: 0; }
+  .lamp { left: 4%; }
+}

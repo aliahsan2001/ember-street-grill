@@ -1,0 +1,204 @@
+<!doctype html>
+<html lang="en">
+<head>
+<!-- @include head -->
+<title>Ember Street Grill · Charcoal BBQ & Karahi in Clifton, Karachi</title>
+<meta name="description" content="Seekh, tikka and karahi fired over live charcoal on Boat Basin after sunset. Build your order and send it straight to our kitchen on WhatsApp.">
+<script type="module" src="/src/main.js"></script>
+</head>
+<body data-barba="wrapper">
+<!-- @include header -->
+<main id="main" data-barba="container" data-barba-namespace="home">
+
+  <div class="shutter" data-shutter role="region" aria-label="Shop shutter">
+    <div class="shutter-housing" aria-hidden="true"><span></span></div>
+    <div class="shutter-curtain" data-curtain>
+      <div class="shutter-sign">
+        <div class="truck-border" aria-hidden="true"></div>
+        <p class="sign-urdu" lang="ur" aria-hidden="true">ایمبر سٹریٹ گرِل</p>
+        <p class="sign-name">Ember</p>
+        <p class="sign-sub">Street Grill · BBQ &amp; Karahi · Boat Basin</p>
+        <p class="sign-hours"><span lang="ur" aria-hidden="true">شام کے بعد کھلتے ہیں</span><span>Opens after sunset</span></p>
+        <div class="truck-border" aria-hidden="true"></div>
+      </div>
+      <div class="shutter-gate">
+        <p class="hud gate-status" data-open-wrap><span class="status-dot"></span><span data-open-status>Open daily from 5 pm</span></p>
+        <div class="gate-actions">
+          <button type="button" class="btn btn-primary" data-open-shutter>Lift the shutter <svg aria-hidden="true"><use href="#i-arrow"/></svg></button>
+        </div>
+        <p class="gate-swipe" aria-hidden="true"><span class="swipe-arrow"></span>or swipe up</p>
+      </div>
+      <div class="shutter-handle" aria-hidden="true"><span></span></div>
+    </div>
+  </div>
+
+  <section class="hero" aria-labelledby="hero-title">
+    <div class="scene-wrap" data-grill-wrap aria-hidden="true">
+      <canvas data-grill data-scene="grill"></canvas>
+      <div class="grill-lite">
+        <img src="/img/grill-poster.webp" alt="" decoding="async">
+        <div class="css-embers"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+      </div>
+    </div>
+    <div class="hud hud-tl" aria-hidden="true">COAL <b data-temp>640</b>°C · <span data-clock>--:--</span> PKT</div>
+    <div class="hud hud-tr" aria-hidden="true">24.8138° N · 67.0302° E</div>
+    <div class="hud hud-br" aria-hidden="true">GRILL 01 · SEEKH ×1 · TIKKA ×1</div>
+    <div class="container hero-inner">
+      <div class="hero-copy">
+        <p class="eyebrow" data-hero-fade>Boat Basin, Clifton · After sunset since 2014</p>
+        <h1 id="hero-title" class="display" data-split>Real coal.<br>Real <span class="text-ember">smoke.</span><br>Real karahi.</h1>
+        <p class="lead" data-hero-fade>Seekh, tikka and karahi fired over live charcoal every night. Drop dishes in your tray and send the whole order to our kitchen as one tidy WhatsApp message. No phone queue, no app commission.</p>
+        <div class="hero-ctas" data-hero-fade>
+          <a class="btn btn-primary" href="/menu">Build your order <svg aria-hidden="true"><use href="#i-arrow"/></svg></a>
+          <a class="btn btn-wa" href="https://wa.me/" data-wa-chat target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#i-wa"/></svg>Order on WhatsApp</a>
+        </div>
+        <div class="hero-meta" data-hero-fade>
+          <span class="chip" data-open-wrap><span class="status-dot"></span><span data-open-status>Open daily from 5 pm</span></span>
+          <span class="chip"><svg aria-hidden="true"><use href="#i-bike"/></svg>Delivery across Clifton &amp; DHA</span>
+          <span class="chip"><svg aria-hidden="true" class="star"><use href="#i-star"/></svg>4.8 from 2,100+ reviews</span>
+        </div>
+      </div>
+    </div>
+    <a class="scroll-cue" href="#deals" aria-label="Scroll to today's deals"><i></i><span class="hud">Scroll</span></a>
+  </section>
+
+  <div class="marquee" aria-hidden="true">
+    <div class="marquee-track">
+      <span>Seekh kebab</span><span>Chicken karahi</span><span>Malai boti</span><span>Bihari boti</span><span>Paratha rolls</span><span>Namak mandi</span><span>Mint margarita</span><span>Fire wings</span>
+      <span>Seekh kebab</span><span>Chicken karahi</span><span>Malai boti</span><span>Bihari boti</span><span>Paratha rolls</span><span>Namak mandi</span><span>Mint margarita</span><span>Fire wings</span>
+    </div>
+  </div>
+
+  <section class="section" id="deals" aria-labelledby="deals-title">
+    <div class="container">
+      <div class="section-head">
+        <div>
+          <p class="eyebrow">Today's deals</p>
+          <h2 id="deals-title" class="display" data-smoke>Fresh off<br>the coals</h2>
+        </div>
+        <p class="lead" data-reveal>A new special every day of the week, plus platters built for families and groups. Drop any of them straight into your tray.</p>
+      </div>
+      <div data-daily></div>
+      <div class="platter-row" data-platters></div>
+      <p class="center-link"><a class="btn btn-ghost" href="/deals">Spin the deals table <svg aria-hidden="true"><use href="#i-spin"/></svg></a></p>
+    </div>
+  </section>
+
+  <section class="section section-glow" aria-labelledby="how-title">
+    <div class="container how">
+      <div>
+        <p class="eyebrow">How ordering works</p>
+        <h2 id="how-title" class="display h-xl" data-smoke>Three taps.<br>Zero hold music.</h2>
+        <p class="lead" data-reveal>During the dinner rush our phones never stop. So we made ordering something you can do without calling at all.</p>
+        <ol class="steps">
+          <li class="step" data-reveal><span class="step-num">1</span><div><h3>Drop dishes in your tray</h3><p>Pick from BBQ, karahi, rolls and drinks. Every dish lands in a steel tray that follows you around the site.</p></div></li>
+          <li class="step" data-reveal><span class="step-num">2</span><div><h3>Check your order</h3><p>The tray keeps a live total, delivery included, and stays saved while you browse.</p></div></li>
+          <li class="step" data-reveal><span class="step-num">3</span><div><h3>Send it on WhatsApp</h3><p>We write it up as one clear message with your items, address and total. Tap send and the kitchen confirms.</p></div></li>
+        </ol>
+      </div>
+      <div class="phone-stage" data-reveal data-phone-stage>
+        <div class="phone" data-phone>
+          <div class="phone-screen">
+            <div class="phone-notch"></div>
+            <div class="wa-top">
+              <div class="wa-avatar"><svg aria-hidden="true"><use href="#i-flame"/></svg></div>
+              <div><b>Ember Street Grill</b><small>online</small></div>
+            </div>
+            <div class="wa-thread" aria-label="Example WhatsApp order">
+              <div class="wa-msg out"><b>New order · Ember Street Grill</b>
+Order ESG-4K2QX
+
+<b>Delivery</b> · Sana Ahmed
+House 12, Street 4, DHA Phase 6
+
+<b>Items</b>
+2 × Beef Seekh Kebab — Rs 2,300
+1 × Chicken Karahi (Full) — Rs 3,400
+4 × Tandoori Naan — Rs 320
+2 × Mint Margarita — Rs 780
+
+<b>Total: Rs 6,800</b>
+Payment: Cash on delivery<time>9:41 pm ✓✓</time></div>
+              <div class="wa-msg in">Got it, Sana! Your order is on the coals. Rider leaves in about 25 minutes.<time>9:42 pm</time></div>
+              <div class="wa-msg in"><span class="typing" aria-label="typing"><i></i><i></i><i></i></span></div>
+            </div>
+          </div>
+          <div class="phone-float f1"><svg aria-hidden="true"><use href="#i-check"/></svg>Order received</div>
+          <div class="phone-float f2"><svg aria-hidden="true"><use href="#i-flame"/></svg>0% commission</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" aria-labelledby="sig-title">
+    <div class="container">
+      <div class="section-head">
+        <div>
+          <p class="eyebrow">Signature dishes</p>
+          <h2 id="sig-title" class="display" data-smoke>What Karachi<br>comes back for</h2>
+        </div>
+        <a class="btn btn-ghost" href="/menu" data-reveal>Full menu · 28 dishes <svg aria-hidden="true"><use href="#i-arrow"/></svg></a>
+      </div>
+      <div class="dish-grid" data-signature></div>
+    </div>
+  </section>
+
+  <section class="section-tight" aria-label="Ember Street Grill in numbers">
+    <div class="container">
+      <div class="stats" data-reveal>
+        <div class="stat"><b><span data-count="12">12</span><em>+</em></b><span>years on the coals</span></div>
+        <div class="stat"><b><span data-count="28">28</span></b><span>dishes, one searchable menu</span></div>
+        <div class="stat"><b><span data-count="0">0</span><em>%</em></b><span>commission on direct orders</span></div>
+        <div class="stat"><b><span data-count="25">25</span><em>min</em></b><span>average delivery in Clifton</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" aria-labelledby="reviews-title">
+    <div class="container">
+      <div class="section-head">
+        <div>
+          <p class="eyebrow">Regulars say</p>
+          <h2 id="reviews-title" class="display" data-smoke>Smoke you<br>can taste</h2>
+        </div>
+        <p class="lead" data-reveal>Placeholder reviews for this concept. On a live site these would come from Google reviews.</p>
+      </div>
+      <div class="quotes">
+        <figure class="quote" data-reveal>
+          <div class="stars" aria-label="5 out of 5"><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg></div>
+          <blockquote>The seekh is properly charred, and ordering on WhatsApp means I don't have to call six times on a Friday night.</blockquote>
+          <figcaption><span class="avatar">HR</span><span><b>Hamza R.</b>DHA Phase 5</span></figcaption>
+        </figure>
+        <figure class="quote" data-reveal>
+          <div class="stars" aria-label="5 out of 5"><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg></div>
+          <blockquote>The Family Feast fed six of us with leftovers. The karahi tastes like it came straight off a Peshawar street.</blockquote>
+          <figcaption><span class="avatar">AK</span><span><b>Ayesha K.</b>Clifton Block 2</span></figcaption>
+        </figure>
+        <figure class="quote" data-reveal>
+          <div class="stars" aria-label="5 out of 5"><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg></div>
+          <blockquote>Seeing the full menu with prices before I order is so much better than scrolling Instagram stories.</blockquote>
+          <figcaption><span class="avatar">US</span><span><b>Usman S.</b>Bath Island</span></figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <section class="section-tight" aria-labelledby="cta-title">
+    <div class="container">
+      <div class="cta-band" data-reveal>
+        <img src="/img/p/1502030818212-8601501607a6-1280.webp" alt="" loading="lazy" decoding="async">
+        <p class="eyebrow">Hungry?</p>
+        <h2 id="cta-title" class="display">The grill's<br>already hot</h2>
+        <p>Your order is three taps away. Build it now and we'll have it on the coals before you've found your slippers.</p>
+        <div class="hero-ctas">
+          <a class="btn btn-primary" href="/menu">Build your order <svg aria-hidden="true"><use href="#i-arrow"/></svg></a>
+          <a class="btn btn-ghost" href="/deals">See today's deals</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+<!-- @include footer -->
+</body>
+</html>

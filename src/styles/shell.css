@@ -1,0 +1,127 @@
+/* =========================================================
+   Shell: pieces that persist across pages
+   (truck-art accents, HUD type, ember cursor,
+   smoke veil, tray dock, smoke headings)
+   ========================================================= */
+
+:root {
+  --smoke: #8f857e;
+  --truck-pink: #ff4f8b;
+  --truck-yellow: #ffd23f;
+  --truck-green: #2fbf71;
+  --truck-teal: #19b6c9;
+  --font-mono: 'JetBrains Mono', ui-monospace, Consolas, monospace;
+  --font-neon: 'Tilt Neon', var(--font-body);
+}
+
+/* truck-art border: painted triangles and dots, like the chamak-patti trim on Karachi trucks */
+.truck-border {
+  height: 16px;
+  background:
+    radial-gradient(circle at 12px 12px, var(--truck-yellow) 2.4px, transparent 3px) 0 0 / 24px 16px,
+    conic-gradient(from 135deg at 50% 0, var(--truck-pink) 90deg, transparent 0) 0 0 / 24px 9px repeat-x,
+    conic-gradient(from 135deg at 50% 0, var(--truck-green) 90deg, transparent 0) 12px 0 / 24px 9px repeat-x,
+    linear-gradient(var(--truck-teal), var(--truck-teal)) 0 100% / 100% 3px no-repeat;
+  opacity: .9;
+}
+
+.hud {
+  font-family: var(--font-mono);
+  font-size: .68rem;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+  color: rgba(246, 237, 228, .62);
+}
+.hud b { color: var(--ember-2); font-weight: 600; }
+
+/* split headings keep line masks so letters rise from below */
+.split-line { overflow: hidden; padding-bottom: .04em; }
+
+/* ---------- ember cursor ---------- */
+.has-ember-cursor, .has-ember-cursor a, .has-ember-cursor button, .has-ember-cursor [role='button'], .has-ember-cursor label { cursor: none; }
+.has-ember-cursor input, .has-ember-cursor textarea, .has-ember-cursor select { cursor: text; }
+.ember-cursor {
+  position: fixed; left: 0; top: 0; z-index: 400; pointer-events: none;
+  width: 10px; height: 10px; margin: -5px 0 0 -5px; border-radius: 50%;
+  background: radial-gradient(circle at 40% 40%, #fff3c4, var(--ember-2) 40%, var(--ember) 70%);
+  box-shadow: 0 0 10px 3px rgba(255,106,31,.75), 0 0 28px 8px rgba(255,80,10,.35);
+  opacity: 0; transition: opacity .2s, width .25s var(--ease), height .25s var(--ease), margin .25s var(--ease), background-color .2s;
+  animation: emberPulse 1.6s ease-in-out infinite;
+}
+.ember-cursor.is-visible { opacity: 1; }
+.ember-cursor.is-hover { width: 34px; height: 34px; margin: -17px 0 0 -17px; background: rgba(255,106,31,.12); border: 1.5px solid var(--ember-2); }
+.ember-cursor.is-down { width: 6px; height: 6px; margin: -3px 0 0 -3px; }
+@keyframes emberPulse { 50% { box-shadow: 0 0 14px 5px rgba(255,106,31,.9), 0 0 36px 10px rgba(255,80,10,.4); } }
+.spark-canvas { position: fixed; inset: 0; width: 100vw; height: 100vh; z-index: 399; pointer-events: none; }
+
+/* ---------- smoke page transition ---------- */
+.smoke-veil { position: fixed; inset: 0; z-index: 300; pointer-events: none; opacity: 0; overflow: hidden; }
+.smoke-veil.is-active { pointer-events: auto; }
+.smoke-veil-inner { position: absolute; inset: -30% -60%; }
+.smoke-veil span {
+  position: absolute; left: var(--x); top: var(--y); width: var(--s); height: var(--s); border-radius: 50%;
+  background: radial-gradient(circle, rgba(58,52,49,1) 0%, rgba(38,33,31,.96) 38%, rgba(22,18,17,.85) 58%, rgba(13,10,9,0) 72%);
+  filter: blur(8px);
+}
+.smoke-veil span:nth-child(3n) { background: radial-gradient(circle, rgba(96,86,80,.95) 0%, rgba(50,44,41,.9) 40%, rgba(13,10,9,0) 70%); }
+.smoke-veil-ember { position: absolute; inset: 0; background: radial-gradient(ellipse at 50% 120%, rgba(255,106,31,.35), transparent 55%); opacity: 0; }
+
+/* ---------- smoke-formed headings ---------- */
+[data-smoke] { position: relative; }
+.smoke-pending, .smoke-pending * { color: transparent !important; text-shadow: none !important; }
+.smoke-done { transition: color .5s ease, text-shadow .5s ease; }
+.smoke-canvas { position: absolute; pointer-events: none; z-index: 2; }
+
+/* ---------- tray dock ---------- */
+.tray-dock {
+  position: fixed; right: 20px; bottom: 20px; z-index: 90; width: 360px;
+  border-radius: 22px; overflow: hidden;
+  background: linear-gradient(180deg, rgba(36,29,26,.96), rgba(18,14,13,.97));
+  border: 1px solid rgba(255,180,120,.18);
+  box-shadow: 0 30px 70px -20px rgba(0,0,0,.85), 0 0 40px -18px rgba(255,106,31,.5);
+  backdrop-filter: blur(14px);
+  transform: translateY(130%); transition: transform .6s var(--ease), width .5s var(--ease);
+}
+.tray-dock.is-visible { transform: none; }
+.tray-stage { position: relative; height: 200px; background: radial-gradient(ellipse at 50% 80%, rgba(255,120,50,.18), transparent 70%); transition: height .5s var(--ease), opacity .3s; }
+.tray-stage canvas { width: 100%; height: 100%; display: block; }
+.tray-hud { position: absolute; left: 14px; top: 12px; font-family: var(--font-mono); font-size: .62rem; letter-spacing: .14em; color: rgba(246,237,228,.5); }
+.tray-bar { display: flex; align-items: center; justify-content: space-between; gap: 12px; padding: 12px 14px 14px; border-top: 1px solid var(--line); }
+.tray-kicker { font-size: .72rem; color: var(--muted); letter-spacing: .04em; }
+.tray-total { font-family: var(--font-display); font-weight: 800; font-size: 1.7rem; line-height: 1; color: var(--ember-3); font-variant-numeric: tabular-nums; }
+.tray-min { position: absolute; right: 10px; top: 10px; width: 30px; height: 30px; border-radius: 50%; border: 1px solid var(--line-2); background: rgba(0,0,0,.35); display: grid; place-items: center; }
+.tray-min span { width: 10px; height: 2px; background: var(--text); border-radius: 2px; }
+.tray-dock.is-min { width: 270px; }
+.tray-dock.is-min .tray-stage { height: 0; opacity: 0; }
+.tray-dock.is-min .tray-min { top: 50%; translate: 0 -50%; right: auto; left: auto; position: static; margin: 0 0 0 auto; display: none; }
+.tray-dock.is-min .tray-bar { border-top: 0; cursor: pointer; }
+.tray-dock.is-min::after { content: ''; position: absolute; inset: 0; pointer-events: none; }
+.tray-list { list-style: none; margin: 0; padding: 36px 14px 10px; height: 100%; overflow: hidden; display: grid; gap: 6px; align-content: start; }
+.tray-list li { display: grid; grid-template-columns: 40px 1fr auto; gap: 10px; align-items: center; padding: 6px 8px; border-radius: 12px; background: rgba(255,255,255,.04); font-size: .85rem; }
+.tray-list img { width: 40px; height: 40px; border-radius: 50%; object-fit: cover; box-shadow: 0 0 0 2px #efece6; }
+.tray-list span { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.tray-list b { color: var(--ember-3); }
+.lite .tray-stage { height: 170px; }
+
+@media (max-width: 760px) {
+  .tray-dock { left: 10px; right: 10px; bottom: 10px; width: auto; border-radius: 20px; }
+  .tray-dock.is-min { width: auto; }
+  .tray-stage { height: 150px; }
+  .tray-total { font-size: 1.45rem; }
+}
+
+/* toasts sit above the dock */
+.toast { bottom: 26px; }
+body:has(.tray-dock.is-visible) .toast { bottom: 300px; }
+body:has(.tray-dock.is-min.is-visible) .toast { bottom: 100px; }
+@media (max-width: 760px) {
+  body:has(.tray-dock.is-visible) .toast { bottom: 250px; }
+  body:has(.tray-dock.is-min.is-visible) .toast { bottom: 96px; }
+}
+
+.link-plain { background: none; border: 0; padding: 0; color: var(--muted); font: inherit; text-align: left; }
+.link-plain:hover { color: var(--ember-2); }
+.link-wa { color: #6ee79c; }
+.footer-blurb { margin-top: 16px; max-width: 34ch; }
+.footer-status { margin-top: 12px; display: flex; align-items: center; gap: 8px; }
+.site-footer > .truck-border { position: absolute; top: 0; left: 0; right: 0; }

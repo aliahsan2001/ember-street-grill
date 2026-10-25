@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+<head>
+<!-- @include head -->
+<title>Menu · Ember Street Grill</title>
+<meta name="description" content="The full Ember Street Grill menu with prices: BBQ, karahi, paratha rolls, sides and drinks. Drop dishes in your tray and send the order on WhatsApp.">
+<script type="module" src="/src/main.js"></script>
+</head>
+<body data-barba="wrapper">
+<!-- @include header -->
+<main id="main" data-barba="container" data-barba-namespace="menu">
+
+  <section class="page-hero menu-hero" aria-labelledby="menu-title">
+    <div class="container">
+      <nav class="crumbs" aria-label="Breadcrumb"><a href="/">Home</a><span aria-hidden="true">/</span><span aria-current="page">Menu</span></nav>
+      <p class="eyebrow">The full menu · 28 dishes</p>
+      <h1 id="menu-title" class="display" data-split>You pick it.<br>We <span class="text-ember">fire</span> it.</h1>
+      <p class="lead">Every dish and every price, always up to date. Pick what you like and drop it in your tray.</p>
+    </div>
+  </section>
+
+  <div class="ribbon-wrap" data-ribbon-wrap>
+    <svg class="ribbon" data-ribbon aria-label="Menu categories" role="group"></svg>
+    <span class="hud ribbon-hint" aria-hidden="true">Drag the ribbon ⟷</span>
+  </div>
+
+  <section class="container menu-body" aria-label="Menu items">
+    <div class="menu-tools">
+      <label class="search">
+        <span class="sr-only">Search the menu</span>
+        <svg aria-hidden="true"><use href="#i-search"/></svg>
+        <input type="search" placeholder="Search seekh, karahi, lassi…" autocomplete="off" data-search>
+      </label>
+      <p class="hud" data-results-count aria-live="polite">28 dishes</p>
+    </div>
+    <div data-menu></div>
+    <div class="menu-empty" data-empty hidden>
+      <b>Nothing on the grill for that</b>
+      Try “tikka”, “roll” or “mutton”, or <button type="button" class="link-btn" data-clear-search>clear the search</button>.
+    </div>
+  </section>
+
+</main>
+<!-- @include footer -->
+</body>
+</html>

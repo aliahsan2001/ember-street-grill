@@ -1,0 +1,142 @@
+<!doctype html>
+<html lang="en">
+<head>
+<!-- @include head -->
+<title>Our Story · Ember Street Grill</title>
+<meta name="description" content="From a single coal cart on Boat Basin in 2014 to a full charcoal kitchen. The story of Ember Street Grill, printed on our menu card.">
+<script type="module" src="/src/main.js"></script>
+</head>
+<body data-barba="wrapper">
+<!-- @include header -->
+<main id="main" data-barba="container" data-barba-namespace="about">
+
+  <svg class="svg-defs" aria-hidden="true" focusable="false">
+    <filter id="crumple" x="0" y="0" width="100%" height="100%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.006 0.009" numOctaves="5" seed="11" result="noise"/>
+      <feDiffuseLighting in="noise" lighting-color="#ffffff" surfaceScale="9" result="light">
+        <feDistantLight azimuth="225" elevation="42"/>
+      </feDiffuseLighting>
+    </filter>
+    <filter id="ink"><feTurbulence type="fractalNoise" baseFrequency="1.2" numOctaves="2" seed="3"/><feColorMatrix values="0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0 0 0 -2.4 1.6"/><feComposite in="SourceGraphic" operator="in"/></filter>
+  </svg>
+
+  <section class="page-hero about-hero" aria-labelledby="about-title">
+    <div class="container">
+      <nav class="crumbs" aria-label="Breadcrumb"><a href="/">Home</a><span aria-hidden="true">/</span><span aria-current="page">About</span></nav>
+      <p class="eyebrow">Our story</p>
+      <h1 id="about-title" class="display" data-split>It started<br>with one <span class="text-ember">cart</span></h1>
+      <p class="lead">Twelve years, one charcoal grill and the same seekh recipe. We printed the story on our old menu card. Scroll and it stamps itself back in.</p>
+    </div>
+  </section>
+
+  <section class="paper-section" aria-labelledby="story-title">
+    <div class="container">
+      <article class="paper" data-paper>
+        <div class="paper-crumple" aria-hidden="true"></div>
+        <div class="paper-folds" aria-hidden="true"></div>
+        <span class="paper-stain" aria-hidden="true"></span>
+        <header class="paper-head">
+          <p class="paper-mono">Ember Street Grill · Menu card Nº 001 · Boat Basin, Karachi</p>
+          <h2 id="story-title" class="paper-title" data-stamp>Our story</h2>
+          <div class="truck-border" aria-hidden="true"></div>
+        </header>
+        <div class="paper-body">
+          <p data-stamp>In 2014, Bilal and his uncle Rafiq rolled a charcoal cart onto Boat Basin with one dish: beef seekh kebab, minced by hand that afternoon.</p>
+          <p data-stamp>By ten at night there was a queue. By midnight they had sold out.</p>
+          <p data-stamp>We still cook the same way. No gas grills and no shortcuts. Every kebab goes over real lump charcoal, every karahi is fired in iron on a high flame, and every marinade sits for at least twelve hours.</p>
+          <p data-stamp>What changed is how you reach us. Our phones couldn't keep up with the dinner rush, and our Instagram menu was a stack of photos nobody could search. So we built a menu you can order from directly, without paying a delivery app for the privilege.</p>
+        </div>
+        <footer class="paper-foot">
+          <div class="rubber-stamp" data-rubber aria-label="Established 2014, Boat Basin"><span>Est.</span><b>2014</b><span>Boat Basin</span></div>
+          <p class="paper-sign" data-stamp>Bilal Rafiq<br><small>Founder &amp; head of the grill</small></p>
+        </footer>
+      </article>
+    </div>
+  </section>
+
+<section class="section section-glow" aria-labelledby="tl-title">
+  <div class="container split" style="align-items:start">
+    <div class="sticky-col" data-reveal>
+      <p class="eyebrow">Milestones</p>
+      <h2 id="tl-title" class="display h-xl" data-smoke>Twelve years<br>on the coals</h2>
+      <p class="lead" style="margin-top:18px">A cart, a shopfront and a kitchen. Through all of it, the grill has never gone cold.</p>
+    </div>
+    <ol class="timeline">
+      <li class="tl-item" data-reveal><span class="tl-dot"><svg aria-hidden="true"><use href="#i-flame"/></svg></span><div><p class="tl-year">2014</p><h3>A cart on Boat Basin</h3><p>One grill, one dish, two people. Seekh kebab sold out on the first night.</p></div></li>
+      <li class="tl-item" data-reveal><span class="tl-dot"><svg aria-hidden="true"><use href="#i-pin"/></svg></span><div><p class="tl-year">2017</p><h3>Our first shopfront</h3><p>Twelve tables, a proper tandoor and the first chicken karahi on the menu.</p></div></li>
+      <li class="tl-item" data-reveal><span class="tl-dot"><svg aria-hidden="true"><use href="#i-bike"/></svg></span><div><p class="tl-year">2021</p><h3>Delivery across Clifton &amp; DHA</h3><p>Our own riders, so food arrives the way it left the grill: hot.</p></div></li>
+      <li class="tl-item" data-reveal><span class="tl-dot"><svg aria-hidden="true"><use href="#i-wa"/></svg></span><div><p class="tl-year">2026</p><h3>Order direct, online</h3><p>A real menu with real prices, and orders that arrive on WhatsApp already written out.</p></div></li>
+    </ol>
+  </div>
+</section>
+
+<section class="section" aria-labelledby="kitchen-title">
+  <div class="container">
+    <div class="section-head" data-reveal>
+      <div>
+        <p class="eyebrow">Inside the kitchen</p>
+        <h2 id="kitchen-title" class="display" data-smoke>How the<br>flavour gets in</h2>
+      </div>
+      <p class="lead">No secret sauce. Just three rules we've never broken.</p>
+    </div>
+    <div class="kitchen-grid">
+      <article class="k-card" data-reveal>
+        <img src="/img/p/1502030818212-8601501607a6-1280.webp" alt="Hot lump charcoal glowing orange" loading="lazy" decoding="async">
+        <div class="k-card-body"><b>01</b><h3>Real lump charcoal</h3><p>Lit at 3 pm every day and kept at the right heat with a hand fan, not a gas valve.</p></div>
+      </article>
+      <article class="k-card" data-reveal>
+        <img src="/img/p/1594266063697-304befca9629-1280.webp" alt="Marinated chicken pieces on skewers" loading="lazy" decoding="async">
+        <div class="k-card-body"><b>02</b><h3>Twelve-hour marinades</h3><p>Yoghurt, spice and time. Tikka and malai boti are marinated the night before they're grilled.</p></div>
+      </article>
+      <article class="k-card" data-reveal>
+        <img src="/img/p/1694579740719-0e601c5d2437-1280.webp" alt="Karahi being stirred with a wooden spoon" loading="lazy" decoding="async">
+        <div class="k-card-body"><b>03</b><h3>Iron karahi, high flame</h3><p>Every karahi is cooked to order in seasoned iron, so it reaches you in under 25 minutes.</p></div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="section-tight" aria-labelledby="values-title">
+  <div class="container">
+    <h2 id="values-title" class="sr-only">What we stand for</h2>
+    <div class="values">
+      <div class="value" data-reveal><span class="value-ico"><svg aria-hidden="true"><use href="#i-flame"/></svg></span><h3>Fresh every day</h3><p>Meat is bought and minced the same morning. Nothing frozen goes on the grill.</p></div>
+      <div class="value" data-reveal><span class="value-ico"><svg aria-hidden="true"><use href="#i-check"/></svg></span><h3>Halal, always</h3><p>From certified suppliers we've worked with since the cart days.</p></div>
+      <div class="value" data-reveal><span class="value-ico"><svg aria-hidden="true"><use href="#i-bag"/></svg></span><h3>Honest prices</h3><p>The price on the menu is the price you pay. No surprise charges at the door.</p></div>
+      <div class="value" data-reveal><span class="value-ico"><svg aria-hidden="true"><use href="#i-bike"/></svg></span><h3>Our own riders</h3><p>Seven riders on our payroll, so your food never waits on a third-party app.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="section-tight" aria-label="A word from the founder">
+  <div class="container">
+    <figure class="founder" data-reveal>
+      <span class="avatar" aria-hidden="true">BR</span>
+      <div>
+        <blockquote>“If you can't smell the coal from the car park, we're doing it wrong.”</blockquote>
+        <cite>Bilal Rafiq, founder &amp; head of the grill</cite>
+      </div>
+    </figure>
+  </div>
+</section>
+
+<section class="section-tight" aria-labelledby="about-cta">
+  <div class="container">
+    <div class="cta-band" data-reveal>
+      <img src="/img/p/1555939594-58d7cb561ad1-1280.webp" alt="" loading="lazy" decoding="async">
+      <p class="eyebrow">Taste it for yourself</p>
+      <h2 id="about-cta" class="display">Twelve years<br>in one bite</h2>
+      <p>Start with the seekh. Everyone does.</p>
+      <div class="hero-ctas">
+        <a class="btn btn-primary" href="/menu" data-magnetic>Build your order <svg aria-hidden="true"><use href="#i-arrow"/></svg></a>
+        <a class="btn btn-ghost" href="/contact">Visit us</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+</main>
+<!-- @include footer -->
+</body>
+</html>

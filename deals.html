@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="en">
+<head>
+<!-- @include head -->
+<title>Deals & Platters · Ember Street Grill</title>
+<meta name="description" content="Spin the deals table: family and group platters, plus a different special every day of the week at Ember Street Grill, Clifton.">
+<script type="module" src="/src/main.js"></script>
+</head>
+<body data-barba="wrapper">
+<!-- @include header -->
+<main id="main" data-barba="container" data-barba-namespace="deals">
+
+  <section class="page-hero deals-hero" aria-labelledby="deals-title">
+    <div class="container">
+      <nav class="crumbs" aria-label="Breadcrumb"><a href="/">Home</a><span aria-hidden="true">/</span><span aria-current="page">Deals</span></nav>
+      <p class="eyebrow">Deals &amp; platters</p>
+      <h1 id="deals-title" class="display" data-split>Spin the<br><span class="text-ember">table</span></h1>
+    </div>
+  </section>
+
+  <section class="susan-section" aria-label="Platter deals">
+    <div class="container susan-grid">
+      <div class="susan-stage" data-susan-stage>
+        <canvas data-susan aria-hidden="true"></canvas>
+        <div class="susan-lite" data-susan-lite hidden>
+          <img data-lite-img src="/img/p/1547573854-74d2a71d0826-640.webp" alt="Family Feast platter">
+        </div>
+        <div class="susan-controls">
+          <button type="button" class="icon-btn" data-prev aria-label="Previous platter"><svg aria-hidden="true"><use href="#i-back"/></svg></button>
+          <span class="hud" data-drag-hint>Drag to spin · <span data-index>1</span>/6</span>
+          <button type="button" class="icon-btn icon-next" data-next aria-label="Next platter"><svg aria-hidden="true"><use href="#i-back"/></svg></button>
+        </div>
+      </div>
+      <article class="susan-panel" aria-live="polite" data-panel>
+        <span class="platter-badge static" data-tag>Most ordered</span>
+        <p class="platter-serves" data-serves>Serves 4–5</p>
+        <h2 class="display susan-name" data-name>Family Feast</h2>
+        <ul class="tick-list" data-items></ul>
+        <div class="susan-price">
+          <strong data-price>Rs 0</strong>
+          <div><s data-was></s><span class="save" data-save></span></div>
+        </div>
+        <button type="button" class="btn btn-primary" data-add-platter data-add-current>Drop in tray <svg aria-hidden="true"><use href="#i-tray"/></svg></button>
+      </article>
+    </div>
+  </section>
+
+  <section class="section-tight" aria-labelledby="today-title">
+    <div class="container">
+      <div class="section-head">
+        <div>
+          <p class="eyebrow">Today only</p>
+          <h2 id="today-title" class="display" data-smoke>Tonight's<br>special</h2>
+        </div>
+      </div>
+      <div data-daily></div>
+    </div>
+  </section>
+
+  <section class="section section-glow" id="week" aria-labelledby="week-title">
+    <div class="container">
+      <div class="section-head">
+        <div>
+          <p class="eyebrow">Every day, something new</p>
+          <h2 id="week-title" class="display" data-smoke>This week's<br>specials</h2>
+        </div>
+        <p class="lead" data-reveal>Each special runs for that day only, until the kitchen closes. Today's is ready to drop in your tray.</p>
+      </div>
+      <div class="week-grid" data-week></div>
+    </div>
+  </section>
+
+  <section class="section-tight" aria-labelledby="bulk-title">
+    <div class="container">
+      <div class="cta-band" data-reveal>
+        <img src="/img/p/1547573854-74d2a71d0826-1280.webp" alt="" loading="lazy" decoding="async">
+        <p class="eyebrow">Feeding 20 or more?</p>
+        <h2 id="bulk-title" class="display">Office lunch.<br>Mehndi night.</h2>
+        <p>Tell us the headcount and the date. We'll send a custom menu and price on WhatsApp, usually within the hour.</p>
+        <div class="hero-ctas">
+          <a class="btn btn-wa" href="https://wa.me/" data-wa-bulk target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#i-wa"/></svg>Ask for a group quote</a>
+          <a class="btn btn-ghost" href="/contact">Other ways to reach us</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+<!-- @include footer -->
+</body>
+</html>
