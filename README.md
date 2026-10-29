@@ -1,5 +1,15 @@
 # Ember Street Grill: "The shutter opens"
 
+[**Live demo**](https://ember-street-grill.vercel.app) · [Source files](./src/) · [Local setup](#run-it)
+
+## Project at a glance
+
+Cart subscriptions, localStorage persistence, cross-tab updates, delivery calculations, and structured order-message generation.
+
+**Scope:** Frontend concept for a fictional restaurant. WhatsApp handoff prepares a message; it is not an order-processing backend.
+
+**Start reviewing here:** [`src/cart/store.js`](./src/cart/store.js).
+
 Concept project 1 of 8 for the Aqoa Systems portfolio. A fictional BBQ and karahi restaurant in Karachi.
 
 ## What's in it
@@ -21,7 +31,7 @@ Vite · Three.js · GSAP + ScrollTrigger · Lenis · Barba.js · SplitType · Ma
 ## Run it
 From a terminal:
 ```bash
-npm install
+npm ci
 npm run dev
 ```
 The site uses ES modules, so it needs a server: opening `index.html` by double-clicking won't work. Use `npm run dev`, or `npm run build && npm run preview` to check the production build.
